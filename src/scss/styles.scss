@@ -32,8 +32,13 @@
 }
 
 body {
+    margin: 0!important;
     background: $bg-color;
     color: $txt-color;
+}
+
+.separate {
+    height: 20vh;
 }
 
 .content {
@@ -43,6 +48,25 @@ body {
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+    padding-right: 0!important;
+    @media (max-width: 519.98px) {
+        margin: 29px;
+        .separate {
+            display: none
+        }
+        hgroup {
+            text-align: center;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-size: 20px;
+            display: inline-block;
+            line-height: 50px;
+            ;
+        }
+    }
 }
 
 .logo {
@@ -52,6 +76,10 @@ body {
     background: url(/assets/logotipo_damiac.png) no-repeat;
     animation: fade_in 1s ease-out 1s;
     animation-fill-mode: forwards;
+    @media (max-width: 519.98px) {
+        background: url(/assets/logotipo_damiac_mobile.png) no-repeat;
+        height: 245px;
+    }
     &-brillo {
         position: absolute;
         width: 265px;
@@ -60,6 +88,9 @@ body {
         background-size: 220%;
         background-position-y: 155%;
         animation: brillo-logotipo 4s linear 4.5s infinite;
+        @media (max-width: 519.98px) {
+            height: 245px;
+        }
     }
 }
 
@@ -149,23 +180,53 @@ figure {
     padding: 0!important;
     margin: 0;
     a img {
+        width: 120%;
         background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        opacity: .9;
+        &:hover {
+            opacity: 1
+        }
     }
 }
 
-.cdr {
-    width: 100%;
-    height: 196px;
-    display: inline-block;
-    background: red;
-    overflow: hidden;
+@mixin bar-color {
+    height: 3px;
+    display: block;
 }
 
+.o {
+    &-cyan {
+        @include bar-color;
+        background: cyan
+    }
+    &-magenta {
+        @include bar-color;
+        background: magenta
+    }
+    &-yellow {
+        @include bar-color;
+        background: yellow
+    }
+    &-black {
+        @include bar-color;
+        background: black
+    }
+}
+
+.cdr,
 .cdr2 {
-    display: inline-block;
     width: 100%;
     height: 196px;
-    background: green;
+    display: inline-block;
+    background: #ccc;
+    overflow: hidden;
+    @media (max-width: 519.98px) {
+        height: 98px
+    }
 }
 
 .d-inline-flex {
@@ -179,4 +240,23 @@ figure {
 img {
     width: 100%;
     height: auto;
+}
+
+//carousel
+.carousel-control-prev {
+    width: auto;
+    &-icon {
+        width: 34px;
+        height: 67px;
+        background: url(/assets/arrow_left.png) no-repeat;
+    }
+}
+
+.carousel-control-next {
+    width: auto;
+    &-icon {
+        width: 34px;
+        height: 67px;
+        background: url(/assets/arrow_right.png) no-repeat;
+    }
 }
