@@ -1,1 +1,181 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("/assets/fonts/bebas/BebasNeue-Regular.eot");
+  src: url("/assets/fonts/bebas/BebasNeue-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/bebas/BebasNeue-Regular.woff") format("woff"), url("/assets/fonts/bebas/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Bebas Neue light';
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Light.ttf") format("truetype");
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Light.otf");
+}
+
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Regular.ttf") format("truetype");
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Regular.otf");
+}
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Book.ttf") format("truetype");
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Book.otf");
+}
+
+@font-face {
+  font-family: 'Bebas Neue Thin';
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Thin.ttf") format("truetype");
+  src: url("/assets/fonts/bebas/ttf/BebasNeue Thin.otf");
+}
+
+body {
+  background: #e1e5ea;
+  color: #414141;
+}
+
+.content {
+  margin: 25px 50px 0 50px;
+  background: white;
+  font-family: 'Bebas Neue';
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 265px;
+  height: 268px;
+  display: block;
+  background: url(/assets/logotipo_damiac.png) no-repeat;
+  animation: fade_in 1s ease-out 1s;
+  animation-fill-mode: forwards;
+}
+
+.logo-brillo {
+  position: absolute;
+  width: 265px;
+  height: 268px;
+  background: url(/assets/logotipo_brillo.png) no-repeat;
+  background-size: 220%;
+  background-position-y: 155%;
+  animation: brillo-logotipo 4s linear 4.5s infinite;
+}
+
+@keyframes brillo-logotipo {
+  0% {
+    background-position-y: 155%;
+  }
+  5% {
+    background-position-y: 75%;
+  }
+  10% {
+    background-position-y: 5%;
+  }
+  100% {
+    background-position-y: 5%;
+  }
+}
+
+h1 {
+  font-family: 'Bebas Neue Regular';
+  font-size: 97px;
+  line-height: 100px;
+}
+
+h2 {
+  font-family: 'Bebas Neue Book';
+  font-size: 76px;
+  line-height: 75px;
+}
+
+h3 {
+  font-family: 'Bebas Neue Book';
+  font-size: 84px;
+  line-height: 50px;
+}
+
+h4 {
+  font-family: 'Bebas Neue Thin';
+  font-size: 187px;
+  line-height: 187px;
+}
+
+.omac-damiac-facebook {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-left: 10px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  cursor: pointer;
+  background: #385a96;
+}
+
+.omac-damiac-twitter {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-left: 10px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  cursor: pointer;
+  background: #00ade7;
+}
+
+.omac-damiac-instagram {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-left: 10px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  cursor: pointer;
+  background: #c03791;
+  background: -moz-linear-gradient(45deg, #ffc675 0%, #ce3094 53%, #ce3094 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #ffc675), color-stop(53%, #ce3094), color-stop(100%, #ce3094));
+  background: -webkit-linear-gradient(45deg, #ffc675 0%, #ce3094 53%, #ce3094 100%);
+  background: -o-linear-gradient(45deg, #ffc675 0%, #ce3094 53%, #ce3094 100%);
+  background: -ms-linear-gradient(45deg, #ffc675 0%, #ce3094 53%, #ce3094 100%);
+  background: linear-gradient(45deg, #ffc675 0%, #ce3094 53%, #ce3094 100%);
+}
+
+figure {
+  padding: 0 !important;
+  margin: 0;
+}
+
+figure a img {
+  background-position: center;
+}
+
+.cdr {
+  width: 100%;
+  height: 196px;
+  display: inline-block;
+  background: red;
+  overflow: hidden;
+}
+
+.cdr2 {
+  display: inline-block;
+  width: 100%;
+  height: 196px;
+  background: green;
+}
+
+.d-inline-flex {
+  margin-left: 150px;
+}
+
+.d-inline-flex > .col-4 {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
