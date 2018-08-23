@@ -1,0 +1,76 @@
+.logo {
+    width: 265px;
+    height: 268px;
+    display: block;
+    background: url(/assets/logotipo_damiac.png) no-repeat;
+    animation: fade_in 1s ease-out 1s;
+    animation-fill-mode: forwards;
+    @media (min-width: 767.98px)and(max-width: 1200px) {
+        width: 100%;
+        background-size: 100%;
+    }
+    @media (max-width: 519.98px) {
+        background: url(/assets/logotipo_damiac_mobile.png) no-repeat;
+        height: 245px;
+    }
+    &-brillo {
+        position: absolute;
+        width: 265px;
+        height: 268px;
+        background: url(/assets/logotipo_brillo.png) no-repeat;
+        background-size: 220%;
+        background-position-y: 155%;
+        animation: brillo-logotipo 4s linear 4.5s infinite;
+        @media (max-width: 519.98px) {
+            height: 245px;
+        }
+    }
+}
+
+//Animacion logotipo damiac
+@keyframes brillo-logotipo {
+    0% {
+        background-position-y: 155%;
+    }
+    5% {
+        background-position-y: 75%;
+    }
+    10% {
+        background-position-y: 5%;
+    }
+    100% {
+        background-position-y: 5%;
+    }
+}
+
+h1 {
+    font-family: 'Bebas Neue Regular';
+    font-size: 5rem;
+    line-height: 100px;
+}
+
+h2 {
+    font-family: 'Bebas Neue Book';
+    font-size: 3.9473684210526314rem;
+    line-height: 3.9473684210526314rem;
+}
+
+h3 {
+    font-family: 'Bebas Neue Book';
+    font-size: 4.2105263157894735rem;
+    line-height: 2.6315789473684212rem;
+}
+
+h4 {
+    font-family: 'Bebas Neue Thin';
+    font-size: 9.842105263157896rem;
+    line-height: 9.842105263157896rem;
+}
+
+// .content-left {
+//     position: relative;
+//     aside {
+//         position: absolute;
+//         bottom: 0;
+//     }
+// }

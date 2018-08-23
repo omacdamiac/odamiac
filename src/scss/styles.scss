@@ -1,34 +1,22 @@
 @import 'variables';
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('/assets/fonts/bebas/BebasNeue-Regular.eot');
-    src: url('/assets/fonts/bebas/BebasNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/assets/fonts/bebas/BebasNeue-Regular.woff') format('woff'), /* Modern Browsers */
-    url('/assets/fonts/bebas/BebasNeue-Regular.ttf') format('truetype')/* Safari, Android, iOS */
-}
-
-@font-face {
-    font-family: 'Bebas Neue light';
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Light.ttf') format('truetype');
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Light.otf');
-}
-
-@font-face {
-    font-family: 'Bebas Neue Regular';
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Regular.ttf') format('truetype');
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Regular.otf');
-}
-
-@font-face {
-    font-family: 'Bebas Neue Book';
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Book.ttf') format('truetype');
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Book.otf');
-}
-
-@font-face {
-    font-family: 'Bebas Neue Thin';
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Thin.ttf') format('truetype');
-    src: url('/assets/fonts/bebas/ttf/BebasNeue Thin.otf');
+@import 'fonts';
+@import 'bar-left';
+@import 'footer';
+@import 'picture';
+html {
+    font-size: 19px;
+    @media (min-width: 1174px) and (max-width: 1199.98px) {
+        font-size: 18px;
+    }
+    @media (min-width: 1024px) and (max-width: 1173.98px) {
+        font-size: 17px;
+    }
+    @media (min-width: 992px) and (max-width: 1023.98px) {
+        font-size: 16px;
+    }
+    @media (min-width: 767.98px) and (max-width: 991.98px) {
+        font-size: 12px;
+    }
 }
 
 body {
@@ -37,10 +25,18 @@ body {
     color: $txt-color;
 }
 
-.separate {
-    height: 20vh;
+a {
+    color: $txt-color;
 }
 
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+// .separate {
+//     height: 20vh;
+// }
 .content {
     margin: 25px 50px 0 50px;
     background: white;
@@ -49,88 +45,42 @@ body {
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
     padding-right: 0!important;
-    @media (max-width: 519.98px) {
+    @media (max-width: 767.98px) {
         margin: 29px;
-        .separate {
-            display: none
+        .redes {
+            position: absolute;
+            //float: right;
+            top: 0;
+            right: 0;
+            width: 75px;
         }
-        hgroup {
+        .position-absolute {
+            position: relative!important;
+        }
+        .hgroup {
             text-align: center;
+        }
+        aside {
+            position: relative;
         }
         h1,
         h2,
         h3,
         h4 {
-            font-size: 20px;
+            font-size: 40px;
             display: inline-block;
             line-height: 50px;
-            ;
+            letter-spacing: 1px;
         }
     }
-}
-
-.logo {
-    width: 265px;
-    height: 268px;
-    display: block;
-    background: url(/assets/logotipo_damiac.png) no-repeat;
-    animation: fade_in 1s ease-out 1s;
-    animation-fill-mode: forwards;
-    @media (max-width: 519.98px) {
-        background: url(/assets/logotipo_damiac_mobile.png) no-repeat;
-        height: 245px;
-    }
-    &-brillo {
-        position: absolute;
-        width: 265px;
-        height: 268px;
-        background: url(/assets/logotipo_brillo.png) no-repeat;
-        background-size: 220%;
-        background-position-y: 155%;
-        animation: brillo-logotipo 4s linear 4.5s infinite;
-        @media (max-width: 519.98px) {
-            height: 245px;
+    @media (max-width: 609.98px) {
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-size: 20px;
         }
     }
-}
-
-@keyframes brillo-logotipo {
-    0% {
-        background-position-y: 155%;
-    }
-    5% {
-        background-position-y: 75%;
-    }
-    10% {
-        background-position-y: 5%;
-    }
-    100% {
-        background-position-y: 5%;
-    }
-}
-
-h1 {
-    font-family: 'Bebas Neue Regular';
-    font-size: 97px;
-    line-height: 100px;
-}
-
-h2 {
-    font-family: 'Bebas Neue Book';
-    font-size: 76px;
-    line-height: 75px;
-}
-
-h3 {
-    font-family: 'Bebas Neue Book';
-    font-size: 84px;
-    line-height: 50px;
-}
-
-h4 {
-    font-family: 'Bebas Neue Thin';
-    font-size: 187px;
-    line-height: 187px;
 }
 
 @mixin cdr {
@@ -142,6 +92,10 @@ h4 {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     cursor: pointer;
+    @media (max-width: 519.98px) {
+        display: block;
+        margin: 10px;
+    }
 }
 
 .omac-damiac {
@@ -166,33 +120,6 @@ h4 {
     }
 }
 
-//img.apilate {
-//     display: table;
-//     table-layout: fixed;
-//     img {
-//         display: inline
-//     }
-//     img:first-child {
-//         clear: both
-//     }
-// }
-figure {
-    padding: 0!important;
-    margin: 0;
-    a img {
-        width: 120%;
-        background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        opacity: .9;
-        &:hover {
-            opacity: 1
-        }
-    }
-}
-
 @mixin bar-color {
     height: 3px;
     display: block;
@@ -214,49 +141,5 @@ figure {
     &-black {
         @include bar-color;
         background: black
-    }
-}
-
-.cdr,
-.cdr2 {
-    width: 100%;
-    height: 196px;
-    display: inline-block;
-    background: #ccc;
-    overflow: hidden;
-    @media (max-width: 519.98px) {
-        height: 98px
-    }
-}
-
-.d-inline-flex {
-    margin-left: 150px;
-    &>.col-4 {
-        padding: 0;
-        margin: 0;
-    }
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-//carousel
-.carousel-control-prev {
-    width: auto;
-    &-icon {
-        width: 34px;
-        height: 67px;
-        background: url(/assets/arrow_left.png) no-repeat;
-    }
-}
-
-.carousel-control-next {
-    width: auto;
-    &-icon {
-        width: 34px;
-        height: 67px;
-        background: url(/assets/arrow_right.png) no-repeat;
     }
 }

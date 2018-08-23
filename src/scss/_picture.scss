@@ -1,0 +1,60 @@
+.carousel-control-prev {
+    width: auto;
+    &-icon {
+        width: 34px;
+        height: 67px;
+        background: url(/assets/arrow_left.png) no-repeat;
+    }
+}
+
+.carousel-control-next {
+    width: auto;
+    &-icon {
+        width: 34px;
+        height: 67px;
+        background: url(/assets/arrow_right.png) no-repeat;
+    }
+}
+
+.cdr,
+.cdr2 {
+    width: 100%;
+    height: 196px;
+    display: inline-block;
+    background: #000;
+    overflow: hidden;
+    @media (max-width: 767.98px) {
+        height: 98px
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    padding: 0!important;
+    margin: 0;
+    height: 196px;
+    @media (max-width: 767.98px) {
+        height: 98px
+    }
+    a img {
+        width: 120%;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -ms-transform: scale(1.8);
+        /* IE 9 */
+        -webkit-transform: scale(1.8);
+        /* Safari 3-8 */
+        transform: scale(1.8);
+        opacity: .9;
+        &:hover {
+            opacity: 1
+        }
+    }
+}

@@ -1,4 +1,10 @@
 @font-face {
+  font-family: 'Raph Lanok Future';
+  src: url("/assets/fonts/RaphLanokFuture.ttf") format("truetype");
+  src: url("/assets/fonts/RaphLanokFuture.otf");
+}
+
+@font-face {
   font-family: 'Bebas Neue';
   src: url("/assets/fonts/bebas/BebasNeue-Regular.eot");
   src: url("/assets/fonts/bebas/BebasNeue-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/bebas/BebasNeue-Regular.woff") format("woff"), url("/assets/fonts/bebas/BebasNeue-Regular.ttf") format("truetype");
@@ -28,46 +34,6 @@
   src: url("/assets/fonts/bebas/ttf/BebasNeue Thin.otf");
 }
 
-body {
-  margin: 0 !important;
-  background: #e1e5ea;
-  color: #414141;
-}
-
-.separate {
-  height: 20vh;
-}
-
-.content {
-  margin: 25px 50px 0 50px;
-  background: white;
-  font-family: 'Bebas Neue';
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-  padding-right: 0 !important;
-}
-
-@media (max-width: 519.98px) {
-  .content {
-    margin: 29px;
-  }
-  .content .separate {
-    display: none;
-  }
-  .content hgroup {
-    text-align: center;
-  }
-  .content h1,
-  .content h2,
-  .content h3,
-  .content h4 {
-    font-size: 20px;
-    display: inline-block;
-    line-height: 50px;
-  }
-}
-
 .logo {
   width: 265px;
   height: 268px;
@@ -75,6 +41,13 @@ body {
   background: url(/assets/logotipo_damiac.png) no-repeat;
   animation: fade_in 1s ease-out 1s;
   animation-fill-mode: forwards;
+}
+
+@media (min-width: 767.98px) and (max-width: 1200px) {
+  .logo {
+    width: 100%;
+    background-size: 100%;
+  }
 }
 
 @media (max-width: 519.98px) {
@@ -117,26 +90,212 @@ body {
 
 h1 {
   font-family: 'Bebas Neue Regular';
-  font-size: 97px;
+  font-size: 5rem;
   line-height: 100px;
 }
 
 h2 {
   font-family: 'Bebas Neue Book';
-  font-size: 76px;
-  line-height: 75px;
+  font-size: 3.9473684210526314rem;
+  line-height: 3.9473684210526314rem;
 }
 
 h3 {
   font-family: 'Bebas Neue Book';
-  font-size: 84px;
-  line-height: 50px;
+  font-size: 4.2105263157894735rem;
+  line-height: 2.6315789473684212rem;
 }
 
 h4 {
   font-family: 'Bebas Neue Thin';
-  font-size: 187px;
-  line-height: 187px;
+  font-size: 9.842105263157896rem;
+  line-height: 9.842105263157896rem;
+}
+
+.by_declan {
+  font-family: 'Raph Lanok Future';
+  font-size: 44px;
+}
+
+@media (max-width: 990.98px) {
+  .by_declan {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 802.98px) {
+  .by_declan {
+    font-size: 28px;
+    line-height: 70px;
+  }
+}
+
+hr {
+  border: 2px solid #414141;
+}
+
+.carousel-control-prev {
+  width: auto;
+}
+
+.carousel-control-prev-icon {
+  width: 34px;
+  height: 67px;
+  background: url(/assets/arrow_left.png) no-repeat;
+}
+
+.carousel-control-next {
+  width: auto;
+}
+
+.carousel-control-next-icon {
+  width: 34px;
+  height: 67px;
+  background: url(/assets/arrow_right.png) no-repeat;
+}
+
+.cdr,
+.cdr2 {
+  width: 100%;
+  height: 196px;
+  display: inline-block;
+  background: #000;
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .cdr,
+  .cdr2 {
+    height: 98px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  padding: 0 !important;
+  margin: 0;
+  height: 196px;
+}
+
+@media (max-width: 767.98px) {
+  figure {
+    height: 98px;
+  }
+}
+
+figure a img {
+  width: 120%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-transform: scale(1.8);
+  /* IE 9 */
+  -webkit-transform: scale(1.8);
+  /* Safari 3-8 */
+  transform: scale(1.8);
+  opacity: .9;
+}
+
+figure a img:hover {
+  opacity: 1;
+}
+
+html {
+  font-size: 19px;
+}
+
+@media (min-width: 1174px) and (max-width: 1199.98px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1173.98px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1023.98px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0 !important;
+  background: #e1e5ea;
+  color: #414141;
+}
+
+a {
+  color: #414141;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  margin: 25px 50px 0 50px;
+  background: white;
+  font-family: 'Bebas Neue';
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  padding-right: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  .content {
+    margin: 29px;
+  }
+  .content .redes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+  }
+  .content .position-absolute {
+    position: relative !important;
+  }
+  .content .hgroup {
+    text-align: center;
+  }
+  .content aside {
+    position: relative;
+  }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
+    font-size: 40px;
+    display: inline-block;
+    line-height: 50px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 609.98px) {
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
+    font-size: 20px;
+  }
 }
 
 .omac-damiac-facebook {
@@ -151,6 +310,13 @@ h4 {
   background: #385a96;
 }
 
+@media (max-width: 519.98px) {
+  .omac-damiac-facebook {
+    display: block;
+    margin: 10px;
+  }
+}
+
 .omac-damiac-twitter {
   display: inline-block;
   width: 34px;
@@ -161,6 +327,13 @@ h4 {
   -webkit-border-radius: 6px;
   cursor: pointer;
   background: #00ade7;
+}
+
+@media (max-width: 519.98px) {
+  .omac-damiac-twitter {
+    display: block;
+    margin: 10px;
+  }
 }
 
 .omac-damiac-instagram {
@@ -181,23 +354,11 @@ h4 {
   background: linear-gradient(45deg, #ffc675 0%, #ce3094 53%, #ce3094 100%);
 }
 
-figure {
-  padding: 0 !important;
-  margin: 0;
-}
-
-figure a img {
-  width: 120%;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: .9;
-}
-
-figure a img:hover {
-  opacity: 1;
+@media (max-width: 519.98px) {
+  .omac-damiac-instagram {
+    display: block;
+    margin: 10px;
+  }
 }
 
 .o-cyan {
@@ -222,54 +383,4 @@ figure a img:hover {
   height: 3px;
   display: block;
   background: black;
-}
-
-.cdr,
-.cdr2 {
-  width: 100%;
-  height: 196px;
-  display: inline-block;
-  background: #ccc;
-  overflow: hidden;
-}
-
-@media (max-width: 519.98px) {
-  .cdr,
-  .cdr2 {
-    height: 98px;
-  }
-}
-
-.d-inline-flex {
-  margin-left: 150px;
-}
-
-.d-inline-flex > .col-4 {
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.carousel-control-prev {
-  width: auto;
-}
-
-.carousel-control-prev-icon {
-  width: 34px;
-  height: 67px;
-  background: url(/assets/arrow_left.png) no-repeat;
-}
-
-.carousel-control-next {
-  width: auto;
-}
-
-.carousel-control-next-icon {
-  width: 34px;
-  height: 67px;
-  background: url(/assets/arrow_right.png) no-repeat;
 }
