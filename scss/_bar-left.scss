@@ -2,7 +2,7 @@
     width: 265px;
     height: 268px;
     display: block;
-    background: url(/assets/logotipo_damiac.png) no-repeat;
+    background: url(./assets/logotipo_damiac.png) no-repeat;
     animation: fade_in 1s ease-out 1s;
     animation-fill-mode: forwards;
     @media (min-width: 767.98px)and(max-width: 1200px) {
@@ -10,14 +10,14 @@
         background-size: 100%;
     }
     @media (max-width: 519.98px) {
-        background: url(/assets/logotipo_damiac_mobile.png) no-repeat;
+        background: url(./assets/logotipo_damiac_mobile.png) no-repeat;
         height: 245px;
     }
     &-brillo {
         position: absolute;
         width: 265px;
         height: 268px;
-        background: url(/assets/logotipo_brillo.png) no-repeat;
+        background: url(./assets/logotipo_brillo.png) no-repeat;
         background-size: 220%;
         background-position-y: 155%;
         animation: brillo-logotipo 4s linear 4.5s infinite;

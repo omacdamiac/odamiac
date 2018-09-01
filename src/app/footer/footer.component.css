@@ -1,0 +1,21 @@
+.by_declan {
+  font-family: 'Raph Lanok Future';
+  font-size: 44px;
+}
+
+@media (max-width: 990.98px) {
+  .by_declan {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 802.98px) {
+  .by_declan {
+    font-size: 28px;
+    line-height: 70px;
+  }
+}
+
+hr {
+  border: 2px solid #414141;
+}
